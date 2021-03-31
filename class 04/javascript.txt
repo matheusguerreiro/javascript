@@ -1,0 +1,61 @@
+,-----------.
+| variables |
+'-----------'
+    var ou let    // para declarar uma variável
+    var nome = 'Matheus'
+    var idade = 29
+    var status = true
+---------------------------------------------------
+,-----------------.
+| primitive types |
+'-----------------'
+    number -> 5, 18, -12 | 0.5, -15.9, 3.14
+        Infinity ->
+        NaN ->
+    string -> "Google", 'JavaScript', `Rayssa`
+    boolean -> true, false
+    null ->
+    undefined ->
+    object ->
+        Array ->
+    function
+
+    command: typeof    // para descobrir o tipo de dados de alguma variável
+        var n = 18
+        typeof n
+-------------------------------------------------------------------------------
+,---------------.
+| data handling |
+'---------------'
+    CONVERSÃO
+    string -> number
+        Number.parseInt(n)      // converte para Int
+        Number.parseFloat(n)    // converte para Float
+        Number                  // converte automático
+    
+    CONVERSÃO
+    number -> string
+        String(n)       // converte para String
+        n.toString()    // converte para String
+
+    TEMPLATE STRING
+    var n1 = Number.parseInt(window.prompt('Digite um número: '))
+    var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+    var s = n1 + n2
+    window.alert(`A soma de ${n1} + ${n2} é: ${s}`)    // exemplo de template string
+
+    FORMATANDO STRINGS
+    var s = 'JavaScript'
+        s.length           // quantidade de caracteres
+        s.toUpperCase()    // tudo para MAIÚSCULAS
+        s.toLowerCase()    // tudo para minúsculas
+
+    FORMATANDO NÚMEROS
+    var n = 1543.5
+        n.toFixed(2)                                                       // casas após a vírgula
+        n.toFixed(2).replace('.', ',')                                     // trocar o . por ,
+        n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})    // tipo de moeda local
+            // 'BRL' = Real Brasileiro
+            // 'USD' = Dólar Americano
+            // 'EUR' = Euro Europeu
+------------------------------------------------------------------------------------------------------
