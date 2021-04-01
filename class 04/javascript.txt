@@ -119,4 +119,48 @@
     x = x + 1   |   x ++
     x = x - 1   |   x --
 
+    RELACIONAIS
+    5 > 2               // maior
+    > true
+    7 < 4               // menor
+    > false
+    8 >= 8              // maior ou igual
+    > true
+    9 <= 7              // menor ou igual
+    > false
+    5 == 5              // igual
+    > true
+    4 != 4              // diferente
+    > false
 
+    IDENTIDADE
+    5 == 5
+    > true
+    5 == '5'            // mesma grandeza tipos iguais ou diferentes
+    > true
+    5 === '5'           // mesmo valor e mesmo tipo -> identidade -> === ou !==
+    > false
+    5 === 5
+    > true
+
+    LÓGICOS na ordem de PRECEDÊNCIA
+    !                   // negação
+    &&                  // conjunção
+    ||                  // disjunção
+
+    PRECEDÊNCIA em uma expressão
+    aritméticos
+    () ** */% +-
+    relacionais
+    > < >= <= == !=         // sem precedência entre eles
+    lógicos
+    ! && ||
+
+    TERNÁRIO
+    ?
+    :
+    teste ? true : false
+    var m = 5.5
+    m > 7? 'aprovado' : 'reprovado'
+    > 'reprovado'
+--------------------------------------------------------------
