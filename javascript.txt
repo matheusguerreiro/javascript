@@ -218,8 +218,175 @@
            d.style.background = 'yellow'
            d.style.color = 'black' */
 ---------------------------------------------------------------------
+,------------.
+| DOM events |
+'------------'
+    DOM -> Document Object Model
 
+    crie uma div
 
+    EVENTOS COM MOUSE
+        mouseenter
+        mousemove
+        mousedown
+        mouseup
+        click
+        mouseout
+    
+    1º LIGAÇÃO PELO HTML
+    2º LIGAÇÃO PELO JAVASCRIPT
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex006</title>
+        <style>
+            body {
+                background: black;
+                color: white;
+            }
+            div#area {
+                font: normal 15pt Arial;
+                background: green;
+                color: white;
+                width: 250px;
+                height: 250px;
+                line-height: 250px;
+                text-align: center;
+                border-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        1º<div id="area" onclick="clicar()" onmouseenter="entrar()" 1ºonmouseout="sair()">
+        1º    comece a interação...
+        1º</div>
+        2º<div id="area">
+        2º    comece a interação...
+        2º</div>
+        <script>
+            2ºvar area = window.document.getElementById('area')
+            2ºarea.addEventListener('click', clicar)
+            2ºarea.addEventListener('mouseenter', entrar)
+            2ºarea.addEventListener('mouseout', sair)
+            function clicar() {
+                1ºvar area = window.document.getElementById('area')
+                area.style.background = 'orange'
+                if (area.innerText == 'Entrou!') {
+                    area.innerText = 'Clicou!'
+                } else if (area.innerText == 'Clicou!'){
+                    area.innerText = 'novamente'
+                    area.style.background = 'red'
+                } else {
+                    area.innerText = 'Clicou!'
+                }
+            }
+            function entrar() {
+                1ºvar area = window.document.getElementById('area')
+                area.style.background = 'yellow'
+                area.style.color = 'black'
+                area.innerText = 'Entrou!'
+            }
+            function sair() {
+                1ºvar area = window.document.getElementById('area')
+                area.style.background = 'green'
+                area.style.color = 'white'
+                area.innerText = 'Saiu!'
+            }
+        </script>
+    </body>
+    </html>
 
+        <style>
+            body {
+                background: black;
+                color: white;
+            }
+            input {
+                width: 75px;
+            }
+            div#res {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Somando Valores</h1>
+        <input type="number" name="txtn1" id="txtn1"> + 
+        <input type="number" name="txtn2" id="txtn2">&nbsp;
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="res">Resultado</div>
+        <script>
+            function somar() {
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.getElementById('txtn2')
+                var res = window.document.getElementById('res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 + n2
+                res.innerHTML = `A Soma entre ${n1} e ${n2} é: <strong>${s}</strong>`
+            }
+        </script>
+    </body>
+-----------------------------------------------------------------------------------------
+,------------.
+| conditions |
+'------------'
+    CONDIÇÃO COMPOSTA
+        if (condição) {
+            true
+        } else {
+            false
+        }
 
+    CONDIÇÃO SIMPLES
+        if (condição) {
+            true
+        }
 
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtv.value)
+            if (vel > 80) {
+                res.innerHTML = `<p>Sua Velocidade atual é de: <strong style="color:red">${vel} km/h</strong></p>`
+                res.innerHTML += `<p style="color:red">Você foi <strong>Multado!</strong></p>`
+            } else {
+                res.innerHTML = `<p>Sua Velocidade atual é de: <strong style="color:green">${vel} km/h</strong></p>`
+                res.innerHTML += `<p style="color:green">Dirija sempre com Segurança...</p>`
+            }
+            
+        }
+    </script>
+
+    CONDIÇÃO ANINHADA
+        if (condição) {
+            -----
+        } else if (condição) {
+            -----
+        } else {
+            -----
+        }
+
+    CONDIÇÃO MÚLTIPLA
+        switch (expressão) {
+            case valor 1:
+                -----
+                break
+            case valor 2:
+                -----
+                break
+            case valor 3:
+                -----
+                break
+            default:
+                -----
+                break
+        }
