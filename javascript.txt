@@ -390,3 +390,25 @@
                 -----
                 break
         }
+----------------------------------
+,----------.
+| Loopings |
+'----------'
+    WHILE
+        var contador = 1
+        while (condição) {
+            -----
+            contador++
+        }
+
+    DO WHILE
+        var contador = 1
+        do {
+            -----
+            contador++
+        } while (condição)
+
+    FOR
+        for (var contador=1; c<=10; c++) {
+            -----
+        }
