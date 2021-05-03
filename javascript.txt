@@ -412,3 +412,26 @@
         for (var contador=1; c<=10; c++) {
             -----
         }
+-----------------------------------------------
+,--------.
+| Arrays |
+'--------'
+    let num = [5, 8, 4]     cria um vetor de números
+    num[3] = 6              add elemento na posição 3 em js
+    num.push(7)             add automaticamente ao final
+    num.length              retorna o tamanho do vetor
+    num.sort()              ordena o vetor - menor para o maior
+    num.indexOf(7)          busca o valor 7 e retorna a posição do vetor
+-----------------------------------------------------------------------------
+,-----------.
+| Functions |
+'-----------'
+    function parimpar(n) {
+        if (n % 2 == 0) {
+            return 'PAR!'
+        } else {
+            return 'ÍMPAR!'
+        }
+    }
+    console.log(parimpar(318))
+-----------------------------------
